@@ -1,0 +1,14 @@
+Procedure (G):
+  L ← Empty list that will contain the sorted elements
+  S ← Set of all nodes with zero indegree
+  while S is non-empty
+    remove a node u from S
+    L.add(u)
+    for each adjacent node v of u
+      remove edge(u,v) from the graph
+        if v has no other incoming edges
+          S.add(v)
+        end if
+     end for
+  end while
+  Return L
