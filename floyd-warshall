@@ -1,0 +1,11 @@
+procedure FloyedWarshall(matrix):
+  for k from 1 to N
+    for i from 1 to N
+      for j from 1 to N
+        if matrix[i][j] > matrix[i][k] + matrix[k][j]
+          matrix[i][j] ← matrix[i][k] + matrix[k][j]
+        end if
+      end for
+    end for
+  end for
+  Return matrix
