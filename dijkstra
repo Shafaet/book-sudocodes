@@ -8,9 +8,9 @@ procedure dijkstra(G, source):
     remove u from the Q
     for all edges from u to v in G.adjacentEdges(v) do
       if distance[u] + cost[u][v] < distance[v] 
-        distance[u] ← distance[v] + 1
+        distance[v] ← distance[u] + cost[u][v]
         Q.enqueue(v)
       end if
     end for
   end while
-  Return distance
+  return distance
