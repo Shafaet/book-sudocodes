@@ -1,13 +1,16 @@
 procedure Bicoloring(G, source):
-  Q=queue()
+  Q ← queue()
   Q.enqueue(source)
-  color[source]=white
+  color[] = white
   while Q is not empty
      u ← Q.pop()
      for all edges from u to v in G.adjacentEdges(u) do
          if color[v] = white
-             color[v] = blue, if color[u] = red
-            color[v] = red, otherwise
+             if color[u] ← red
+            color[v] ← blue
+          else
+            color[v] ← red
+          end if
             Q.enqueue(v)
         end if
         if color[u]=color[v]
@@ -15,4 +18,4 @@ procedure Bicoloring(G, source):
         end if
      end for
   end while
-  Return true
+  return true
