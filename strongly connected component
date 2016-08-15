@@ -1,0 +1,40 @@
+procedure DFS(G, u)
+  color[u]  ← GREY
+  for all edges from u to v in G.adjacentEdges(u) do        
+    if color[v] = WHITE
+      DFS(G,v)
+    end if
+  end for
+  stk.add(source)
+  return
+   
+procedure DFS2(R,u, mark)
+  components[mark].add(u) //save the nodes of the new component
+  visited[u] ← true
+  for all edges from u to v in R.adjacentEdges(u) do      
+    if visited[u] ← false
+      DFS2(R,v, mark) 
+    end if
+  end for
+  return
+         
+procedure findSCC(G):
+  stk ← an empty stack
+  visited[] ← false
+  color[] ← WHITE
+  components[] ← null
+  mark ← 0
+  for each node u in G
+    if color[u] = WHITE
+      DFS(G,u)
+    end if
+  end for
+  R = reverseEdges(G)
+  while stk not empty
+      u ← stk.removeTop()
+      if visited[u] ← false
+        mark ← mark + 1 //A new component found                      
+        DFS2(R,u,mark)
+      end if
+  end while
+  return components 
