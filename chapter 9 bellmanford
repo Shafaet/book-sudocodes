@@ -5,13 +5,13 @@ procedure BellmanFord(G,source):
   for step from 1 to N-1
     for all edges from (u,v) in G.E
       if distance[u] + cost[u][v] < distance[v]
-        distance[u] = distance[v] + 1
+        distance[v] ← distance[u] + cost[u][v]
       end if
     end for
   end for
   for all edges from (u,v) in G.E
     if distance[u] + cost[u][v] < distance[v]
-      return “Negative cycle detected
+      return “Negative cycle detected”
     end if
   end for
-  return distance     
+  return distance 
