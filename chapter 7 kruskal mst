@@ -1,7 +1,7 @@
 procedure kruskalMST(G)
-  St={}
-  Esorted=sort_by_weight(G.E)
-  parent[N]=Null
+  St ← {}
+  Esorted ← sort_by_weight(G.E)
+  parent[N] ← Null
   for i from 1 no N
     makeset(N)
     for all the edges (u,v) in Esorted
