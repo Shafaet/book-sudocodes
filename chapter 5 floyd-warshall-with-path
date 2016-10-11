@@ -1,4 +1,4 @@
-procedure FloyedWarshall(matrix):
+procedure FloydWarshall(matrix):
   for k from 1 to N
     for i from 1 to N
       for j from 1 to N
@@ -9,12 +9,12 @@ procedure FloyedWarshall(matrix):
       end for
     end for
   end for
-  Return matrix
+  return matrix
 
 procedure FindPath(i, j)
-  path = [i]
+  path ← [i]
   while i ≠ j
     i ← next[i][j]
     path.append(i)
   end while
-  Return path
+  return path
