@@ -1,0 +1,17 @@
+Procedure FordFulkerson(s, t, G)
+  total_flow ← 0
+  
+  for all edges from u to v in G.adjacentEdges(v) do
+    Residual Capacity Cf(u,v) ← cap(u,v)
+  end for
+  
+  while there is a path from s to t such that Cf[u][v]>0 for all edges (u,v) in path:
+    
+    min_res_cap ←  minimum Cf[u][v] in the path  
+    for each edge (u,v) in the path:
+      Cf(u,v) ← Cf(u,v) - min_res_cap
+      Cf(v,u) ← Cf(v,u) + min_res_cap
+    end for
+    total_flow ← total_flow + min_res_cap
+  end while
+  return total_flow
