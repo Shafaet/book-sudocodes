@@ -1,26 +1,25 @@
 procedure makeset(u, parent):
-  parent[u]=u
+  parent[u] ← u
   Return
 
 procedure init_disjoint_set(N):
-  For i from 1 to N
+  for i from 1 to N
     makeset(i)
   return
 
 procedure Union(a, b)
-  U = FindRepresentative(a)
-  V = FindRepresentative(b)
+  u ←  FindRepresentative(a)
+  v ←  FindRepresentative(b)
   if u != v
-    parent[u]=v
+    parent[u] ← v
   end if
   Return
 
 
-##Not optimized, described the optimization in the book
-##parent[r] = FindRepresentative(parent[r])
 
 procedure FindRepresentative(r)
-  if parent[r]==r
+  if parent[r] = r
     return r
   end if
-  Return FindRepresentative(parent[r])
+  parent[r] ← FindRepresentative(parent[r])
+  return parent[r]
