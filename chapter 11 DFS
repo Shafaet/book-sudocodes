@@ -1,0 +1,14 @@
+procedure DFS(G, source):
+  U ← source
+  time  ← time+1
+  d[u]  ← time
+  color[u]  ← GREY
+  for all edges from u to v in G.adjacentEdges(v) do        
+    if color[v] = WHITE
+     DFS(G,v)
+    end if
+  end for
+  color[u] ← BLACK
+  time ← time+1
+  f[u] ← time
+  return
