@@ -1,4 +1,4 @@
-![graph-algorithm-book-cover](https://raw.githubusercontent.com/Shafaet/book-sudocodes/master/Bookcover/cover-small.jpg)
+![গ্রাফ অ্যালগোরিদম বই](https://raw.githubusercontent.com/Shafaet/book-sudocodes/master/Bookcover/cover-small.jpg)
 
 This repository contains the pseudo-codes used in my **Bangla** book on Graph Algorithms.
 
