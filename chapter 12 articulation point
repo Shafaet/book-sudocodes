@@ -1,0 +1,29 @@
+time ←  0
+d[] ← 0
+low[] ← 0
+procedure FindArticulationPoint(G, u):
+  time ← time+1
+  low[u] ← d[u] ← time
+  visited[u] ← true 
+  no_of_children ←  0
+  for each edge u to v in G.adjacentEdges(u) do
+    if v = parent[u] 
+      Goto line 9
+    end if
+    if visited[v] //This is a backedge
+       low[u] ← min(low[u], d[v])
+    end if
+    if not visited[v]   //This is a tree edge
+      parent[v] ← u
+      FindArticulationPoint(G, v)
+      low[u] ← min(low[u], low[v])
+      if d[u] <= low[v] and u is not root:
+        Articulation_points[u] ← true
+      end if
+      no_of_children ← no_of_children + 1
+    end if
+    if no_of_children > 1 and u is root:
+      Articulation_points[u] ← true
+    end if 
+  end for
+  return
