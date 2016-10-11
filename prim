@@ -1,8 +1,0 @@
-procedure PrimsMST(G)
-  Vt={x} where x is an arbitrary node (starting point) from V.
-  St={}
-  while Vt != G.V
-    Choose an edge (u, v) with minimal weight such that u is in Vt and v is not
-    Add v to Vt, and (u, v) to St
-  end while
-  Return St
