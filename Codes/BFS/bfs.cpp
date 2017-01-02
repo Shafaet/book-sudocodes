@@ -31,6 +31,7 @@ void bfs(int n, vector<int>g[], int source){
 }
 int main(){
     freopen("in", "r", stdin);
+    freopen("out","w",stdout);
     vector<int>g[10000]; //this code can handle maximum 10000 nodes
     int numNodes, numEdges;
     cin>>numNodes>>numEdges;

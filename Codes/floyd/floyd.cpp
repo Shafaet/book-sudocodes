@@ -16,6 +16,7 @@ void floyd_warshall(int numNodes, int g[][mx]){
 
 int main(){
     //freopen("in", "r", stdin);
+    //freopen("out","w",stdout);
     int numNodes, numEdges;
     cin>>numNodes>>numEdges;
     int g[mx][mx];
