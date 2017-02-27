@@ -40,7 +40,6 @@ void bellman(int n, vector<int>g[], vector<int>cost[], int source){
 
 int main(){
     freopen("in", "r", stdin);
-    freopen("out","w",stdout);
     vector<int>g[10000],cost[10000]; 
     int numNodes, numEdges;
     cin>>numNodes>>numEdges;
