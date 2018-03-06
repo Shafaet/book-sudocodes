@@ -30,7 +30,7 @@ void DFS(int u) {
 	f[u] = dfsTime;
 }
 int main(){
-    freopen("in", "r", stdin);
+
 	int n, e;
 	cin>>n>>e;
 	for(int i = 0; i < e; i++) {

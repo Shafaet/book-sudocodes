@@ -15,8 +15,9 @@ struct node{
 void dijstkra(int n, vector<int>g[], vector<int>cost[], int source){
 
     int distance[n+1];
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++) {
         distance[i] = infinity;
+    }
         
     priority_queue<node>q;
     q.push(node(source,0));
@@ -42,8 +43,8 @@ void dijstkra(int n, vector<int>g[], vector<int>cost[], int source){
     }
 }
 int main(){
-    //freopen("in", "r", stdin);
-    vector<int>g[10000],cost[10000]; //this code can handle maximum 10000 nodes
+ 
+    vector<int>g[10000], cost[10000]; //this code can handle maximum 10000 nodes
     int numNodes, numEdges;
     cin>>numNodes>>numEdges;
     for(int i=0;i<numEdges;i++){
