@@ -9,7 +9,7 @@ void makeset(int u){
     parent[u] = u;
 }
 void init_disjoint_set(int numNodes){
-    for(int i=1;i<=numNodes;i++){
+    for(int i=1;i<=numNodes;i++) {
         makeset(i);
     }
 }
@@ -22,7 +22,7 @@ int find_representative(int u){
 int set_union(int u,int v){
     int rep_u = find_representative(u);
     int rep_v = find_representative(v);
-    if(rep_u != rep_v){
+    if (rep_u != rep_v) {
         parent[rep_u] = rep_v;
         return true;
     }
@@ -31,7 +31,7 @@ int set_union(int u,int v){
 
 struct edge{
     int u, v, w;
-    edge(int _u,int _v, int _w){
+    edge(int _u,int _v, int _w) {
         u = _u;
         v = _v;
         w = _w;
