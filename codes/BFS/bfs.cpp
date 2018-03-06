@@ -5,8 +5,9 @@ using namespace std;
 void bfs(int n, vector<int>g[], int source){
     bool visited[n+1];
     int distance[n+1];
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++) {
         visited[i] = false;
+    }
         
     queue<int>q;
     q.push(source);
@@ -25,12 +26,13 @@ void bfs(int n, vector<int>g[], int source){
             }
         }
     }
-    for(int i=1;i<=n;i++){
+    for(int i=1
+        ;i<=n;i++){
         cout<<source<<" --> "<<i<<" = "<<distance[i]<<endl;
     }
 }
 int main(){
-    freopen("in", "r", stdin);
+    
     vector<int>g[10000]; //this code can handle maximum 10000 nodes
     int numNodes, numEdges;
     cin>>numNodes>>numEdges;
